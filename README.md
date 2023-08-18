@@ -1,2 +1,2 @@
 # react-native-speed-meter
-## npm install --save ../MyButtonComponent
+## npm install --save ../SpeedMeter
