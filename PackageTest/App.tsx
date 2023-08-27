@@ -13,12 +13,12 @@ import {
 } from 'react-native';
 
 const App = () => {
-  const handleAlert = (event: string) => {
-    Alert.alert(event);
+  const handleAlert = (event: string, num: Number) => {
+    Alert.alert(event + num);
   };
   return (
     <View style={{flex: 1, backgroundColor: 'yellow'}}>
-      <Button title={'test'} onPress={() => handleAlert('test')} />
+      <Button title={'test'} onPress={() => handleAlert('test', 10)} />
     </View>
   );
 };
