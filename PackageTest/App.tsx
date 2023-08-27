@@ -14,7 +14,7 @@ import {
 
 const App = () => {
   const handleAlert = (event: string, num: Number) => {
-    Alert.alert(event + num);
+    Alert.alert(event);
   };
   return (
     <View style={{flex: 1, backgroundColor: 'yellow'}}>
