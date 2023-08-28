@@ -17,7 +17,12 @@ export const GlobalSize = (number) => {
   return value;
 };
 
-const SpeedMeter = ({ rotationValueProp, onError }) => {
+const SpeedMeter = ({
+  rotationValueProp,
+  onError,
+  percentageValue,
+  showPercentage,
+}) => {
   const [percentage, setPercentage] = useState(1);
   const [rotationValue, setRotationValue] = useState(90);
 
@@ -31,6 +36,7 @@ const SpeedMeter = ({ rotationValueProp, onError }) => {
       onError("invalid");
     } else if (!isNaN(inputValue)) {
       setPercentage(inputValue);
+      percentageValue(inputValue);
       setRotationValue(90 - (inputValue / 100) * 180);
     }
   };
@@ -67,9 +73,11 @@ const SpeedMeter = ({ rotationValueProp, onError }) => {
             <View style={styles.arrowRotationPosition} />
           </View>
         </View>
-        <View style={styles.textInputContainer}>
-          <Text style={styles.percentageText}>{percentage}%</Text>
-        </View>
+        {showPercentage && (
+          <View style={styles.textInputContainer}>
+            <Text style={styles.percentageText}>{percentage}%</Text>
+          </View>
+        )}
       </View>
     </View>
   );
