@@ -1,6 +1,6 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import Button from 'react-native-speed-meter';
+import SpeedMeter from 'react-native-speed-meter';
 import {
   SafeAreaView,
   ScrollView,
@@ -17,8 +17,8 @@ const App = () => {
     Alert.alert(event);
   };
   return (
-    <View style={{flex: 1, backgroundColor: 'yellow'}}>
-      <Button title={'test'} />
+    <View style={{height: 300, width: '100%', backgroundColor: 'yellow'}}>
+      <SpeedMeter rotationValueProp={50} onError={(e: any) => console.log(e)} />
     </View>
   );
 };
