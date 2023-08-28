@@ -1,26 +1,26 @@
 import React from 'react';
-import type {PropsWithChildren} from 'react';
+import {View, StyleSheet} from 'react-native';
+
 import SpeedMeter from 'react-native-speed-meter';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  Alert,
-} from 'react-native';
 
 const App = () => {
-  const handleAlert = (event: string, num: Number) => {
-    Alert.alert(event);
-  };
   return (
-    <View style={{height: 300, width: '100%', backgroundColor: 'yellow'}}>
-      <SpeedMeter rotationValueProp={50} onError={(e: any) => console.log(e)} />
+    <View style={styles.container}>
+      <SpeedMeter
+        rotationValueProp={50}
+        onError={(error: any) => console.log(error)}
+        showPercentage={true}
+        percentageValue={(value: any) => console.log(value)}
+      />
     </View>
   );
 };
 
 export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f1f4f9',
+  },
+});
