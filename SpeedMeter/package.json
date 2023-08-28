@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faheem-cmd/react-native-speed-meter.git"
+    "url": "git+https://github.com/faheem-cmd/react-native-speed-meter-dev.git"
   },
   "author": "Muhammed Faheem",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/faheem-cmd/react-native-speed-meter/issues"
+    "url": "https://github.com/faheem-cmd/react-native-speed-meter-dev.git/issues"
   },
-  "homepage": "https://github.com/faheem-cmd/react-native-speed-meter#readme",
+  "homepage": "https://github.com/faheem-cmd/react-native-speed-meter-dev.git#readme",
   "peerDependencies": {
     "react-native": ">=0.35",
     "react": "18.2.0"
