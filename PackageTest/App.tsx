@@ -1,6 +1,6 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import Button from 'react-native-speed-meter';
+import SpeedMeter from 'react-native-speed-meter';
 import {
   SafeAreaView,
   ScrollView,
@@ -18,7 +18,10 @@ const App = () => {
   };
   return (
     <View style={{flex: 1, backgroundColor: 'yellow'}}>
-      <Button title={'test'} onPress={() => handleAlert('test', 10)} />
+      <SpeedMeter
+        title={'test'}
+        style={{borderRadius: 10, marginTop: 10, alignSelf: 'center'}}
+      />
     </View>
   );
 };
